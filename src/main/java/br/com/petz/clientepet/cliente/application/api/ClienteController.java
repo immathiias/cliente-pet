@@ -36,8 +36,9 @@ public class ClienteController implements ClienteAPI {
 	public ClienteDetalhadoResponse getClientePorId(UUID idCliente) {
 		log.info("[inicia] ClienteController - getClientePorId");
 		log.info("[idCliente] {}", idCliente);
+		ClienteDetalhadoResponse clienteDetalhado = clienteService.buscaClientePorId(idCliente);
 		log.info("[finaliza] ClienteController - getClientePorId");
-		return null;
+		return clienteDetalhado;
 	}
 
 }
