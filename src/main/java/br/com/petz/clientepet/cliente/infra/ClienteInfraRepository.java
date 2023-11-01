@@ -47,6 +47,7 @@ public class ClienteInfraRepository implements ClienteRepository {
 	@Override
 	public void deleteCliente(Cliente cliente) {
 		log.info("[inicia] ClienteInfraRepository - deleteCliente");
+		clienteSpringDataJPARepository.delete(cliente);
 		log.info("[finaliza] ClienteInfraRepository - deleteCliente");
 		
 	}
