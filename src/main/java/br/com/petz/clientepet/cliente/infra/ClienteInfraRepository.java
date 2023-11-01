@@ -44,4 +44,11 @@ public class ClienteInfraRepository implements ClienteRepository {
 		return cliente;
 	}
 
+	@Override
+	public void deleteCliente(Cliente cliente) {
+		log.info("[inicia] ClienteInfraRepository - deleteCliente");
+		log.info("[finaliza] ClienteInfraRepository - deleteCliente");
+		
+	}
+
 }
