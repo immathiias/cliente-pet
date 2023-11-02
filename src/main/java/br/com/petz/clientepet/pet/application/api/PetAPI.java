@@ -28,6 +28,6 @@ public interface PetAPI {
 	
 	@GetMapping("/{idPet}")
 	@ResponseStatus(code = HttpStatus.OK)
-	PetClienteDetalhadoResponse getPetDoClientePorId(@PathVariable UUID idCliente, @PathVariable UUID idPet);
+	PetClienteDetalhadoResponse getPetDoClienteComId(@PathVariable UUID idCliente, @PathVariable UUID idPet);
 
 }
