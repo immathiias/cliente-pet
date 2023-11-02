@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+import br.com.petz.clientepet.pet.application.api.PetAlteracaoRequest;
 import br.com.petz.clientepet.pet.application.api.PetRequest;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -67,5 +68,20 @@ public class Pet {
 		this.peso = petRequest.getPeso();
 		
 		this.dataHoraDoCadastro = LocalDateTime.now();
+	}
+
+	public void altera(PetAlteracaoRequest petAlteracaoRequest) {
+		this.nomePet = petAlteracaoRequest.getNomePet();
+		this.porte = petAlteracaoRequest.getPorte();
+		this.tipoPet = petAlteracaoRequest.getTipoPet();
+		this.microchip = petAlteracaoRequest.getMicrochip();
+		this.raca = petAlteracaoRequest.getRaca();
+		this.sexo = petAlteracaoRequest.getSexo();
+		this.pelagemCor = petAlteracaoRequest.getPelagemCor();
+		this.dataNascimento = petAlteracaoRequest.getDataNascimento();
+		this.rga = petAlteracaoRequest.getRga();
+		this.peso = petAlteracaoRequest.getPeso();
+		
+		this.dataHoraUltimaAlteracao = LocalDateTime.now();
 	}
 }
