@@ -17,4 +17,6 @@ public interface PetService {
 
 	public PetClienteDetalhadoResponse buscaPetDoClienteComID(UUID idCliente, UUID idPet);
 
+	public void deletePetDoClienteComID(UUID idCliente, UUID idPet);
+
 }

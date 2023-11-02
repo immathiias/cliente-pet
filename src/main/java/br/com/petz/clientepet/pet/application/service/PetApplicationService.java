@@ -51,4 +51,10 @@ public class PetApplicationService implements PetService {
 		return new PetClienteDetalhadoResponse(pet);
 	}
 
+	@Override
+	public void deletePetDoClienteComID(UUID idCliente, UUID idPet) {
+		log.info("[inicia] PetApplicationService - deletePetDoClienteComID");
+		log.info("[finaliza] PetApplicationService - deletePetDoClienteComID");
+	}
+
 }
